@@ -8,16 +8,22 @@ namespace FoodFinder.Controllers
 {
     public class HomeController : Controller
     {
+        private IMapService _mapService;
+
+        public HomeController(IMapService mapService)
+        {
+            _mapService = mapService;
+        }
+
         public IActionResult Index()
         {
             return View();
         }
 
-        public IActionResult About()
+        public IActionResult Search(String start, String end)
         {
-            ViewData["Message"] = "Your application description page.";
-
-            return View();
+            var searchResult = _mapService.FindRoute(start, end);
+            return View("Search", searchResult);
         }
     }
 }

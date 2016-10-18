@@ -14,6 +14,7 @@ namespace FoodFinder
     {
         public Startup(IHostingEnvironment env)
         {
+            var apiKey = Environment.GetEnvironmentVariable("FOODFINDER_MAPS_API_KEY");
             var builder = new ConfigurationBuilder()
                 .SetBasePath(env.ContentRootPath)
                 .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
@@ -29,6 +30,7 @@ namespace FoodFinder
         {
             // Add framework services.
             services.AddMvc();
+            services.AddTransient<IMapService, MapService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
