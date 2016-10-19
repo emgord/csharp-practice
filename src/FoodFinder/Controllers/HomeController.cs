@@ -20,9 +20,9 @@ namespace FoodFinder.Controllers
             return View();
         }
 
-        public IActionResult Search(String start, String end)
+        public async Task<IActionResult> Search(String start, String end)
         {
-            var searchResult = _mapService.FindRoute(start, end);
+            var searchResult = await _mapService.FindRoute(start, end);
             return View("Search", searchResult);
         }
     }

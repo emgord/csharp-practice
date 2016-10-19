@@ -14,6 +14,8 @@ Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "FoodFinder", "src\FoodFinde
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "FoodFinderTests", "src\FoodFinderTests\FoodFinderTests.xproj", "{ABDCE858-9D6B-48B2-83C4-7F3D322FAF72}"
 EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "MapsApiTester", "src\MapsApiTester\MapsApiTester.xproj", "{AE85D498-4976-44B8-9200-53373E0A7BF8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -28,6 +30,10 @@ Global
 		{ABDCE858-9D6B-48B2-83C4-7F3D322FAF72}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ABDCE858-9D6B-48B2-83C4-7F3D322FAF72}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ABDCE858-9D6B-48B2-83C4-7F3D322FAF72}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE85D498-4976-44B8-9200-53373E0A7BF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE85D498-4976-44B8-9200-53373E0A7BF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE85D498-4976-44B8-9200-53373E0A7BF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE85D498-4976-44B8-9200-53373E0A7BF8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -35,5 +41,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{87308D80-8024-4313-94E0-B0A236A8A9E9} = {6C03CB41-FA0D-4A86-B143-BC41AAF30DC6}
 		{ABDCE858-9D6B-48B2-83C4-7F3D322FAF72} = {6C03CB41-FA0D-4A86-B143-BC41AAF30DC6}
+		{AE85D498-4976-44B8-9200-53373E0A7BF8} = {6C03CB41-FA0D-4A86-B143-BC41AAF30DC6}
 	EndGlobalSection
 EndGlobal

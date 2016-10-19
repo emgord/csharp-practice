@@ -7,6 +7,6 @@ namespace FoodFinder
 {
     public interface IMapService
     {
-        SearchResult FindRoute(string start, string end);
+        Task<SearchResult> FindRoute(string start, string end);
     }
 }
