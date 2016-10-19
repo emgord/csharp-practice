@@ -1,4 +1,7 @@
 ﻿@using FoodFinder
-@model FoodFinder.SearchResult
+@model FoodFinder.Place[]
 
-<p>@Model.Start.Latitude</p>
+@foreach (var place in Model)
+{
+    <div>@place.name</div>
+}
