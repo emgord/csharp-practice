@@ -3,7 +3,11 @@
 }
 
 <form method="get" action="~/Home/search">
-    <label>Start Location: <input type="text" name="start"/></label>
-    <label>End Location: <input type="text" name="end"/></label>
-    <input type="submit" value="Search"/>
+    <div class="form-group">
+        <label>Start Location: <input class="form-control" type="text" name="start"/></label>
+    </div>
+    <div class="form-group">
+        <label>End Location: <input class="form-control" type="text" name="end" /></label>
+    </div>
+    <input class="btn btn-primary" type="submit" value="Search"/>
 </form>
