@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using FoodFinder.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FoodFinder.Controllers
@@ -29,8 +30,11 @@ namespace FoodFinder.Controllers
             var startPlacesResult = await _placeService.FindPlaces(searchResult.Start.Latitude, searchResult.Start.Longitude);
             var endPlacesResult = await _placeService.FindPlaces(searchResult.End.Latitude, searchResult.End.Longitude);
             var allPlacesResults = startPlacesResult.Concat(endPlacesResult).ToArray();
+            var mapUrl = string.Format("https://www.google.com/maps/embed/v1/directions?key={0}&origin={1}&destination={2}",
+                Environment.GetEnvironmentVariable("FOODFINDER_MAPS_API_KEY"), start.Replace(" ", "+"), end.Replace(" ", "+"));
+            var searchViewModel = new SearchViewModel(allPlacesResults, mapUrl);
 
-            return View("Search", allPlacesResults);
+            return View("Search", searchViewModel);
         }
     }
 }
