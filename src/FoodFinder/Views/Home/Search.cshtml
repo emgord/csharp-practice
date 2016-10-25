@@ -1,4 +1,5 @@
-﻿@using FoodFinder
+﻿@using System.Security.Principal
+@using FoodFinder
 @model FoodFinder.ViewModels.SearchViewModel
 
 <iframe width="800"
@@ -9,5 +10,7 @@
 
 @foreach (var place in Model.Places)
 {
-    <div>@place.name</div>
+    <div>
+        <a href=@Model.buildStopoverLink(@place.place_id)>@place.name</a>
+    </div>
 }
